@@ -4,7 +4,7 @@ path = "E:\DCIM"
 
 def main():
 
-    photofolders = [ f.path for f in os.scandir(path) if f.is_dir() ]
+    photofolders = [ f.name for f in os.scandir(path) if f.is_dir() and not f.name.startswith('.') ]
     print(photofolders)
 
 if __name__ == "__main__":
